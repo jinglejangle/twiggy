@@ -1,0 +1,10 @@
+vendor/
+tags
+.DS_Store
+build/
+phpunit.sh
+app/cache/
+app/logs/
+php.tags
+.swp
+.swo

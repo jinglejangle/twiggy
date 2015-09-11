@@ -1,0 +1,33 @@
+{% extends "IMAGLdapBundle::layout.html.twig" %}
+
+{% block imag_ldap_content %}
+
+    <div class="container" style="width:350px;">
+    {% if error %}
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            {{  error.message }}
+        </div>
+
+    {% endif %}
+
+        <form class="form-signin" action="{{ path('login_check') }}" method="post" >
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="inputEmail" class="sr-only">LDAP Username</label>
+            <input name="_username" type="text" id="inputEmail" class="form-control" placeholder="LDAP Username" required autofocus value="{{ last_username }}">
+            <div style="margin-top:5px;">
+                <label for="inputPassword" class="sr-only">Password</label>
+            <input name="_password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                </div>
+            <input type="hidden" name="_csrf_token" value="{{ token }}"/>
+            <div style="margin-top:5px;">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+{% endblock %}

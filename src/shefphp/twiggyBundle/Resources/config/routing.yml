@@ -1,0 +1,3 @@
+shefphptwiggy_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: shefphptwiggyBundle:Default:index }

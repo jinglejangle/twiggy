@@ -1,0 +1,4 @@
+shefphptwiggy:
+    resource: "@shefphptwiggyBundle/Resources/config/routing.yml"
+    prefix:   /
+

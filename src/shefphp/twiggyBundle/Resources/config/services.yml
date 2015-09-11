@@ -1,0 +1,4 @@
+services:
+#    shefphptwiggy.example:
+#        class: shefphp\twiggyBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
